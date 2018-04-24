@@ -2,6 +2,7 @@
 import csv
 import json
 import string
+import pickle
 
 def main(filename):
     # read file into lines
