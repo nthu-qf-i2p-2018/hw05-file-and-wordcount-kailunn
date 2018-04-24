@@ -45,7 +45,7 @@ def main(filename):
     # a,12345
     # I,23456
     # ...
-    with open('word_count.csv','w') as csv_file:
+    with open('word_count.csv','w',newline='') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(['word','count'])
         
