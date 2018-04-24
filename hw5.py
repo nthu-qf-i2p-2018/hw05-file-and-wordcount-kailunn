@@ -58,12 +58,10 @@ def main(filename):
     json.dump(word_counter.most_common(),open('word_counter.json','w'))
     
     import pickle
-    pickle.dump(word_counter,open('word_counter.pickle','wb'))
+    pickle.dump(word_counter,open('word_counter.pkl','wb'))
     # BONUS: dump to a pickle file named "wordcount.pkl"
     # hint: dump the Counter object directly
 
 
 if __name__ == '__main__':
     main("i_have_a_dream.txt")
-
-    
