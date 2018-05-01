@@ -34,8 +34,8 @@ def main(filename):
     # compute word count from all_words
     
     from collections import Counter
-    word_counter = Counter(all_words)
-    word_counter.most_common()
+    wordcount = Counter(all_words)
+    wordcount.most_common()
 
     
 
@@ -45,20 +45,20 @@ def main(filename):
     # a,12345
     # I,23456
     # ...
-    with open('word_count.csv','w',newline='') as csv_file:
+    with open('wordcount.csv','w',newline='') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(['word','count'])
         
     #
-        writer.writerows(word_counter.most_common())
+        writer.writerows(wordcount.most_common())
 
 
     # dump to a json file named "wordcount.json"
     import json
-    json.dump(word_counter.most_common(),open('word_counter.json','w'))
+    json.dump(wordcount.most_common(),open('wordcount.json','w'))
     
     import pickle
-    pickle.dump(word_counter,open('word_counter.pkl','wb'))
+    pickle.dump(wordcount,open('wordcount.pkl','wb'))
     # BONUS: dump to a pickle file named "wordcount.pkl"
     # hint: dump the Counter object directly
 
